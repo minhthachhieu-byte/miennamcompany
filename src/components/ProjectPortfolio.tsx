@@ -14,9 +14,9 @@ interface ProjectPortfolioProps {
 const renderAmenityIcon = (iconName: string) => {
   const IconComponent = (LucideIcons as any)[iconName];
   if (IconComponent) {
-    return <IconComponent className="h-5 w-5 text-amber-400" />;
+    return <IconComponent className="h-5 w-5 text-[#A81C1C]" />;
   }
-  return <LucideIcons.Sparkles className="h-5 w-5 text-amber-400" />;
+  return <LucideIcons.Sparkles className="h-5 w-5 text-[#A81C1C]" />;
 };
 
 export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedProjectId }: ProjectPortfolioProps) {
@@ -44,7 +44,7 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center space-x-2 bg-white border border-slate-200 px-3.5 py-1.5 rounded-full shadow-xs">
-            <LucideIcons.Compass className="h-4 w-4 text-[#D4AF37]" />
+            <LucideIcons.Compass className="h-4 w-4 text-[#A81C1C]" />
             <span className="text-xs font-sans font-bold text-[#0F172A] uppercase tracking-[0.2em]">
               {lang === 'vi' ? 'SIÊU DỰ ÁN QUỐC TẾ' : 'GLOBAL BLUE CHIPS'}
             </span>
@@ -53,7 +53,7 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
           <h2 className="text-3xl sm:text-4xl font-serif text-[#0F172A] tracking-tight leading-tight" style={{ fontFamily: 'Georgia, serif' }}>
             {t.portfolioTitle}
           </h2>
-          <div className="h-1 w-20 bg-[#D4AF37] mx-auto rounded-full" />
+          <div className="h-1 w-20 bg-[#A81C1C] mx-auto rounded-full" />
           <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto">
             {t.portfolioSubtitle}
           </p>
@@ -67,13 +67,13 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
               onClick={() => handleProjectChange(proj.id)}
               className={`flex items-center justify-between p-4 md:px-6 md:py-4 rounded-xl text-left border transition-all duration-300 cursor-pointer w-full md:w-80 ${
                 selectedProjectId === proj.id
-                  ? 'bg-white border-[#D4AF37] shadow-md shadow-slate-200/50'
+                  ? 'bg-white border-[#A81C1C] shadow-md shadow-slate-200/50'
                   : 'bg-white border-slate-200 hover:border-slate-300 hover:bg-slate-50'
               }`}
             >
               <div className="flex flex-col text-left">
                 <span className={`text-base font-bold transition-colors ${
-                  selectedProjectId === proj.id ? 'text-[#D4AF37]' : 'text-[#0F172A]'
+                  selectedProjectId === proj.id ? 'text-[#A81C1C]' : 'text-[#0F172A]'
                 }`}>
                   {lang === 'vi' ? proj.name : proj.nameEn}
                 </span>
@@ -84,7 +84,7 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
                 </span>
               </div>
               <LucideIcons.ArrowRight className={`h-4 w-4 transition-transform ${
-                selectedProjectId === proj.id ? 'text-[#D4AF37] translate-x-1' : 'text-slate-400'
+                selectedProjectId === proj.id ? 'text-[#A81C1C] translate-x-1' : 'text-slate-400'
               }`} />
             </button>
           ))}
@@ -106,7 +106,7 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
               
               <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center bg-[#0F172A]/90 backdrop-blur-md px-4 py-3 rounded-lg border border-slate-700">
                 <span className="text-xs font-mono text-slate-300">{t.progress}</span>
-                <span className="text-xs font-sans font-bold text-[#D4AF37]">
+                <span className="text-xs font-sans font-bold text-[#A81C1C]">
                   {lang === 'vi' ? activeProject.progress : activeProject.progressEn}
                 </span>
               </div>
@@ -115,7 +115,7 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
             {/* Quick Specs Grid */}
             <div className="bg-slate-50 rounded-xl border border-slate-150 p-6 space-y-4">
               <h4 className="text-xs font-sans font-bold tracking-widest text-[#0F172A] uppercase flex items-center space-x-2 border-b border-slate-200 pb-3">
-                <LucideIcons.Activity className="h-4 w-4 text-[#D4AF37]" />
+                <LucideIcons.Activity className="h-4 w-4 text-[#A81C1C]" />
                 <span>{t.quickSpecs}</span>
               </h4>
 
@@ -134,7 +134,7 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
                 </div>
                 <div>
                   <span className="block text-slate-500 text-xs font-sans mb-0.5">{t.investment}</span>
-                  <span className="font-mono text-[#D4AF37] font-bold block">{activeProject.investmentCap}</span>
+                  <span className="font-mono text-[#A81C1C] font-bold block">{activeProject.investmentCap}</span>
                 </div>
                 <div>
                   <span className="block text-slate-500 text-xs font-sans mb-0.5">
@@ -152,7 +152,7 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
               <h3 className="text-2xl sm:text-3xl font-serif text-[#0F172A] tracking-tight" style={{ fontFamily: 'Georgia, serif' }}>
                 {lang === 'vi' ? activeProject.name : activeProject.nameEn}
               </h3>
-              <p className="text-[#D4AF37] font-semibold tracking-wide mt-1 text-sm sm:text-base">
+              <p className="text-[#A81C1C] font-semibold tracking-wide mt-1 text-sm sm:text-base">
                 {lang === 'vi' ? activeProject.tagline : activeProject.taglineEn}
               </p>
               <p className="text-slate-600 text-sm sm:text-base mt-4 leading-relaxed font-sans">
@@ -163,13 +163,13 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
             {/* Dimensional highlights */}
             <div className="space-y-4">
               <h4 className="text-xs font-sans font-bold tracking-widest text-[#0F172A] uppercase flex items-center space-x-2 border-b border-slate-200 pb-3">
-                <LucideIcons.Sparkle className="h-4 w-4 text-[#D4AF37]" />
+                <LucideIcons.Sparkle className="h-4 w-4 text-[#A81C1C]" />
                 <span>{t.features}</span>
               </h4>
 
               <div className="grid sm:grid-cols-2 gap-4">
                 {(lang === 'vi' ? activeProject.highlights : activeProject.highlightsEn).map((hl, index) => (
-                  <div key={index} className="p-4 rounded-xl bg-slate-50 border border-slate-150 hover:border-[#D4AF37]/35 hover:bg-slate-100/50 transition duration-200">
+                  <div key={index} className="p-4 rounded-xl bg-slate-50 border border-slate-150 hover:border-[#A81C1C]/35 hover:bg-slate-100/50 transition duration-200">
                     <span className="block text-sm font-bold text-[#0F172A] mb-1">{hl.title}</span>
                     <span className="block text-xs text-slate-500 leading-relaxed font-sans">{hl.description}</span>
                   </div>
@@ -180,7 +180,7 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
             {/* Special Amenities */}
             <div className="space-y-4">
               <h4 className="text-xs font-sans font-bold tracking-widest text-[#0F172A] uppercase flex items-center space-x-2 border-b border-slate-200 pb-3">
-                <LucideIcons.CheckCircle className="h-4 w-4 text-[#D4AF37]" />
+                <LucideIcons.CheckCircle className="h-4 w-4 text-[#A81C1C]" />
                 <span>{t.amenities}</span>
               </h4>
 
@@ -203,7 +203,7 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 border-b border-slate-200 pb-6 gap-4">
             <div>
               <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#0F172A] flex items-center space-x-2" style={{ fontFamily: 'Georgia, serif' }}>
-                <LucideIcons.Layers className="h-5.5 w-5.5 text-[#D4AF37]" />
+                <LucideIcons.Layers className="h-5.5 w-5.5 text-[#A81C1C]" />
                 <span>{t.floorplans}</span>
               </h3>
               <p className="text-xs text-slate-500 mt-1">
@@ -233,7 +233,7 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
             {/* Left: Layout Technical Details */}
             <div className="lg:col-span-5 space-y-6 order-2 lg:order-1">
               <div>
-                <span className="text-xs font-sans font-bold text-[#D4AF37] tracking-wider uppercase block">
+                <span className="text-xs font-sans font-bold text-[#A81C1C] tracking-wider uppercase block">
                   {lang === 'vi' ? 'Thông Số Mặt Bằng Căn Hộ' : 'Unit Specifications'}
                 </span>
                 <h4 className="text-2xl font-serif font-bold text-[#0F172A] mt-1" style={{ fontFamily: 'Georgia, serif' }}>
@@ -258,10 +258,10 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
               </div>
 
               {/* Price Tag */}
-              <div className="p-4 bg-[#D4AF37]/5 border border-[#D4AF37]/15 rounded-xl flex items-center justify-between">
+              <div className="p-4 bg-[#A81C1C]/5 border border-[#A81C1C]/15 rounded-xl flex items-center justify-between">
                 <div>
                   <span className="text-[10px] font-sans text-slate-500 block uppercase tracking-wider">{t.priceEstimate}</span>
-                  <span className="text-xl font-extrabold text-[#D4AF37] font-mono">
+                  <span className="text-xl font-extrabold text-[#A81C1C] font-mono">
                     {lang === 'vi' 
                       ? `~ ${activeFloorplan.priceEstimate} ${t.billionVnd}` 
                       : `~ $${(activeFloorplan.priceEstimate * 0.04).toFixed(1)} ${t.millionUsd}`}
@@ -295,7 +295,7 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
                 <ul className="space-y-1.5">
                   {activeFloorplan.features.map((feat, idx) => (
                     <li key={idx} className="flex items-center space-x-2 text-xs text-slate-600 font-sans">
-                      <LucideIcons.ChevronRight className="h-3.5 w-3.5 text-[#D4AF37] flex-shrink-0" />
+                      <LucideIcons.ChevronRight className="h-3.5 w-3.5 text-[#A81C1C] flex-shrink-0" />
                       <span>{feat}</span>
                     </li>
                   ))}
@@ -308,7 +308,7 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
               <div className="aspect-[4/3] rounded-xl bg-[#0F172A] border border-slate-800 p-6 flex flex-col justify-between shadow-inner relative overflow-hidden group">
                 <div className="flex justify-between items-center text-[10px] font-mono text-slate-400 uppercase tracking-widest border-b border-slate-800 pb-3">
                   <span>{t.interactivePreview}</span>
-                  <span className="text-[#D4AF37] font-bold">{activeFloorplan.id.toUpperCase()} / {activeFloorplan.area}sqm</span>
+                  <span className="text-[#A81C1C] font-bold">{activeFloorplan.id.toUpperCase()} / {activeFloorplan.area}sqm</span>
                 </div>
 
                 {/* Simulated interactive blueprint lines */}
@@ -317,10 +317,10 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
                   <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:24px_24px] opacity-20" />
                   
                   {/* Floorplan Vector Shape */}
-                  <div className="relative w-full max-w-sm aspect-square border-2 border-dashed border-[#D4AF37]/20 rounded-xl p-4 flex items-center justify-center bg-slate-950/40">
-                    <svg viewBox="0 0 100 100" className="w-full h-full text-amber-400/80 stroke-current stroke-[0.8] fill-none stroke-linecap-round stroke-linejoin-round drop-shadow-[0_0_15px_rgba(212,175,55,0.15)] animate-fade-in">
+                  <div className="relative w-full max-w-sm aspect-square border-2 border-dashed border-[#A81C1C]/20 rounded-xl p-4 flex items-center justify-center bg-slate-950/40">
+                    <svg viewBox="0 0 100 100" className="w-full h-full text-red-400/80 stroke-current stroke-[0.8] fill-none stroke-linecap-round stroke-linejoin-round drop-shadow-[0_0_15px_rgba(168,28,28,0.15)] animate-fade-in">
                       {/* Outer boundary */}
-                      <path d="M10 10 H90 V90 H10 Z" className="stroke-[#D4AF37]/30" />
+                      <path d="M10 10 H90 V90 H10 Z" className="stroke-[#A81C1C]/30" />
                       
                       {/* Dynamic rooms based on selected floorplan svgLayout instructions */}
                       {activeFloorplan.svgLayout.split(' ').map((cmd, idx) => {
@@ -332,81 +332,81 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
                       {/* Render custom rooms and subdivisions */}
                       {selectedFloorplanId.includes('exec') && (
                         <>
-                          <rect x="15" y="15" width="35" height="35" className="stroke-[#D4AF37]" />
-                          <rect x="50" y="15" width="35" height="35" className="stroke-[#D4AF37]/60" />
-                          <rect x="15" y="50" width="70" height="35" className="stroke-[#D4AF37]/40" />
-                          <text x="32" y="32" className="fill-[#D4AF37] font-mono text-[5px] stroke-none font-bold">MASTER BD</text>
-                          <text x="68" y="32" className="fill-[#D4AF37]/60 font-mono text-[5px] stroke-none">BATHROOM</text>
-                          <text x="50" y="68" className="fill-[#D4AF37]/80 font-mono text-[5px] stroke-none font-bold">LIVING & DINING ROOM</text>
-                          <circle cx="50" cy="50" r="1.5" className="fill-[#D4AF37] stroke-none" />
+                          <rect x="15" y="15" width="35" height="35" className="stroke-[#A81C1C]" />
+                          <rect x="50" y="15" width="35" height="35" className="stroke-[#A81C1C]/60" />
+                          <rect x="15" y="50" width="70" height="35" className="stroke-[#A81C1C]/40" />
+                          <text x="32" y="32" className="fill-[#A81C1C] font-mono text-[5px] stroke-none font-bold">MASTER BD</text>
+                          <text x="68" y="32" className="fill-[#A81C1C]/60 font-mono text-[5px] stroke-none">BATHROOM</text>
+                          <text x="50" y="68" className="fill-[#A81C1C]/80 font-mono text-[5px] stroke-none font-bold">LIVING & DINING ROOM</text>
+                          <circle cx="50" cy="50" r="1.5" className="fill-[#A81C1C] stroke-none" />
                         </>
                       )}
                       {selectedFloorplanId.includes('grand') && (
                         <>
-                          <rect x="15" y="15" width="30" height="30" className="stroke-[#D4AF37]" />
-                          <rect x="45" y="15" width="40" height="30" className="stroke-[#D4AF37]/60" />
-                          <rect x="15" y="45" width="35" height="40" className="stroke-[#D4AF37]/40" />
-                          <rect x="50" y="45" width="35" height="40" className="stroke-[#D4AF37]/80" />
-                          <text x="30" y="30" className="fill-[#D4AF37] font-mono text-[5px] stroke-none font-bold">MASTER BD</text>
-                          <text x="65" y="30" className="fill-[#D4AF37]/60 font-mono text-[5px] stroke-none font-bold">LIVING ROOM</text>
-                          <text x="32" y="65" className="fill-[#D4AF37]/40 font-mono text-[5px] stroke-none">GUEST BD</text>
-                          <text x="68" y="65" className="fill-[#D4AF37]/80 font-mono text-[5px] stroke-none">BALCONY JACUZZI</text>
-                          <circle cx="45" cy="45" r="1.5" className="fill-amber-500 stroke-none" />
+                          <rect x="15" y="15" width="30" height="30" className="stroke-[#A81C1C]" />
+                          <rect x="45" y="15" width="40" height="30" className="stroke-[#A81C1C]/60" />
+                          <rect x="15" y="45" width="35" height="40" className="stroke-[#A81C1C]/40" />
+                          <rect x="50" y="45" width="35" height="40" className="stroke-[#A81C1C]/80" />
+                          <text x="30" y="30" className="fill-[#A81C1C] font-mono text-[5px] stroke-none font-bold">MASTER BD</text>
+                          <text x="65" y="30" className="fill-[#A81C1C]/60 font-mono text-[5px] stroke-none font-bold">LIVING ROOM</text>
+                          <text x="32" y="65" className="fill-[#A81C1C]/40 font-mono text-[5px] stroke-none">GUEST BD</text>
+                          <text x="68" y="65" className="fill-[#A81C1C]/80 font-mono text-[5px] stroke-none">BALCONY JACUZZI</text>
+                          <circle cx="45" cy="45" r="1.5" className="fill-red-500 stroke-none" />
                         </>
                       )}
                       {selectedFloorplanId.includes('penthouse') && (
                         <>
-                          <rect x="12" y="12" width="76" height="76" className="stroke-[#D4AF37]/30" />
-                          <rect x="15" y="15" width="35" height="35" className="stroke-[#D4AF37]" />
-                          <rect x="50" y="15" width="35" height="35" className="stroke-[#D4AF37]/80" />
-                          <rect x="15" y="50" width="35" height="35" className="stroke-[#D4AF37]/60" />
-                          <rect x="50" y="50" width="35" height="35" className="stroke-[#D4AF37]/50" />
+                          <rect x="12" y="12" width="76" height="76" className="stroke-[#A81C1C]/30" />
+                          <rect x="15" y="15" width="35" height="35" className="stroke-[#A81C1C]" />
+                          <rect x="50" y="15" width="35" height="35" className="stroke-[#A81C1C]/80" />
+                          <rect x="15" y="50" width="35" height="35" className="stroke-[#A81C1C]/60" />
+                          <rect x="50" y="50" width="35" height="35" className="stroke-[#A81C1C]/50" />
                           {/* Central courtyard */}
-                          <circle cx="50" cy="50" r="8" className="stroke-[#D4AF37]" />
-                          <text x="32" y="32" className="fill-[#D4AF37] font-mono text-[4px] stroke-none font-bold">SUITE 1</text>
-                          <text x="68" y="32" className="fill-[#D4AF37]/80 font-mono text-[4px] stroke-none font-bold">SUITE 2</text>
-                          <text x="32" y="68" className="fill-[#D4AF37]/60 font-mono text-[4px] stroke-none font-bold">FAMILY CINE</text>
-                          <text x="68" y="68" className="fill-[#D4AF37]/50 font-mono text-[4px] stroke-none font-bold">DINING AREA</text>
-                          <text x="50" y="52" className="fill-amber-500 font-mono text-[3px] stroke-none font-bold text-center" textAnchor="middle">PRIVATE POOL</text>
+                          <circle cx="50" cy="50" r="8" className="stroke-[#A81C1C]" />
+                          <text x="32" y="32" className="fill-[#A81C1C] font-mono text-[4px] stroke-none font-bold">SUITE 1</text>
+                          <text x="68" y="32" className="fill-[#A81C1C]/80 font-mono text-[4px] stroke-none font-bold">SUITE 2</text>
+                          <text x="32" y="68" className="fill-[#A81C1C]/60 font-mono text-[4px] stroke-none font-bold">FAMILY CINE</text>
+                          <text x="68" y="68" className="fill-[#A81C1C]/50 font-mono text-[4px] stroke-none font-bold">DINING AREA</text>
+                          <text x="50" y="52" className="fill-red-500 font-mono text-[3px] stroke-none font-bold text-center" textAnchor="middle">PRIVATE POOL</text>
                         </>
                       )}
                       {selectedFloorplanId.includes('lakeview') && (
                         <>
-                          <polygon points="15,15 85,15 85,85 15,85" className="stroke-[#D4AF37]" />
-                          <line x1="15" y1="50" x2="85" y2="50" className="stroke-[#D4AF37]/50" />
-                          <line x1="50" y1="15" x2="50" y2="85" className="stroke-[#D4AF37]/50" />
-                          <text x="32" y="32" className="fill-[#D4AF37] font-mono text-[5px] stroke-none font-bold">LAKESIDE SUITE</text>
-                          <text x="68" y="32" className="fill-[#D4AF37]/80 font-mono text-[5px] stroke-none font-bold">TERRACE POOL</text>
-                          <text x="32" y="68" className="fill-[#D4AF37]/40 font-mono text-[5px] stroke-none">KITCHEN</text>
-                          <text x="68" y="68" className="fill-[#D4AF37]/60 font-mono text-[5px] stroke-none">DOUBLE GARAGE</text>
+                          <polygon points="15,15 85,15 85,85 15,85" className="stroke-[#A81C1C]" />
+                          <line x1="15" y1="50" x2="85" y2="50" className="stroke-[#A81C1C]/50" />
+                          <line x1="50" y1="15" x2="50" y2="85" className="stroke-[#A81C1C]/50" />
+                          <text x="32" y="32" className="fill-[#A81C1C] font-mono text-[5px] stroke-none font-bold">LAKESIDE SUITE</text>
+                          <text x="68" y="32" className="fill-[#A81C1C]/80 font-mono text-[5px] stroke-none font-bold">TERRACE POOL</text>
+                          <text x="32" y="68" className="fill-[#A81C1C]/40 font-mono text-[5px] stroke-none">KITCHEN</text>
+                          <text x="68" y="68" className="fill-[#A81C1C]/60 font-mono text-[5px] stroke-none">DOUBLE GARAGE</text>
                         </>
                       )}
                       {selectedFloorplanId.includes('forest') && (
                         <>
-                          <rect x="20" y="20" width="60" height="60" className="stroke-[#D4AF37]" />
-                          <line x1="20" y1="45" x2="80" y2="45" className="stroke-[#D4AF37]/60" />
-                          <text x="50" y="32" className="fill-[#D4AF37] font-mono text-[5px] stroke-none font-bold text-center" textAnchor="middle">YOGA & MEDITATION</text>
-                          <text x="50" y="65" className="fill-[#D4AF37]/60 font-mono text-[5px] stroke-none text-center" textAnchor="middle">FOREST LIVING ROOM</text>
+                          <rect x="20" y="20" width="60" height="60" className="stroke-[#A81C1C]" />
+                          <line x1="20" y1="45" x2="80" y2="45" className="stroke-[#A81C1C]/60" />
+                          <text x="50" y="32" className="fill-[#A81C1C] font-mono text-[5px] stroke-none font-bold text-center" textAnchor="middle">YOGA & MEDITATION</text>
+                          <text x="50" y="65" className="fill-[#A81C1C]/60 font-mono text-[5px] stroke-none text-center" textAnchor="middle">FOREST LIVING ROOM</text>
                         </>
                       )}
                       {selectedFloorplanId.includes('cyber') && (
                         <>
-                          <rect x="15" y="15" width="70" height="70" className="stroke-[#D4AF37]" />
-                          <line x1="15" y1="55" x2="85" y2="55" className="stroke-[#D4AF37]/80" />
+                          <rect x="15" y="15" width="70" height="70" className="stroke-[#A81C1C]" />
+                          <line x1="15" y1="55" x2="85" y2="55" className="stroke-[#A81C1C]/80" />
                           {/* Sliding modular wall indicators */}
                           <line x1="45" y1="15" x2="45" y2="55" className="stroke-cyan-400 stroke-[1.2]" />
-                          <text x="30" y="35" className="fill-[#D4AF37] font-mono text-[5px] stroke-none font-bold">CYBER SUITE</text>
+                          <text x="30" y="35" className="fill-[#A81C1C] font-mono text-[5px] stroke-none font-bold">CYBER SUITE</text>
                           <text x="65" y="35" className="fill-cyan-400 font-mono text-[4.5px] stroke-none">ROBOTIC WALLS</text>
-                          <text x="50" y="72" className="fill-[#D4AF37]/60 font-mono text-[5px] stroke-none text-center" textAnchor="middle">AUTOMATED OFFICE</text>
+                          <text x="50" y="72" className="fill-[#A81C1C]/60 font-mono text-[5px] stroke-none text-center" textAnchor="middle">AUTOMATED OFFICE</text>
                         </>
                       )}
                       {selectedFloorplanId.includes('loft') && (
                         <>
-                          <rect x="15" y="15" width="70" height="70" className="stroke-[#D4AF37]" />
+                          <rect x="15" y="15" width="70" height="70" className="stroke-[#A81C1C]" />
                           {/* Mezzanine level line */}
                           <polygon points="15,15 85,15 85,50 15,50" className="stroke-cyan-500 fill-cyan-500/5" />
                           <text x="50" y="32" className="fill-cyan-400 font-mono text-[5px] stroke-none font-bold text-center" textAnchor="middle">MEZZANINE LOFT (LEVEL 2)</text>
-                          <text x="50" y="68" className="fill-[#D4AF37] font-mono text-[5px] stroke-none text-center" textAnchor="middle">DOUBLE HIGH GLASS ROOM (LEVEL 1)</text>
+                          <text x="50" y="68" className="fill-[#A81C1C] font-mono text-[5px] stroke-none text-center" textAnchor="middle">DOUBLE HIGH GLASS ROOM (LEVEL 1)</text>
                         </>
                       )}
                     </svg>
@@ -416,7 +416,7 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
                 {/* Legend */}
                 <div className="flex justify-center items-center space-x-6 text-[10px] font-mono border-t border-slate-800 pt-3">
                   <div className="flex items-center space-x-1.5">
-                    <span className="w-2.5 h-1 bg-[#D4AF37] rounded-sm" />
+                    <span className="w-2.5 h-1 bg-[#A81C1C] rounded-sm" />
                     <span className="text-slate-400">{lang === 'vi' ? 'Kết cấu tường' : 'Wall Structure'}</span>
                   </div>
                   <div className="flex items-center space-x-1.5">
@@ -424,8 +424,8 @@ export default function ProjectPortfolio({ lang, selectedProjectId, setSelectedP
                     <span className="text-slate-400">{lang === 'vi' ? 'Hệ thống Smart/AI' : 'AI/Smart Systems'}</span>
                   </div>
                   <div className="flex items-center space-x-1.5">
-                    <span className="w-1.5 h-1.5 bg-amber-500 rounded-full animate-ping" />
-                    <span className="text-[#D4AF37] font-bold">Interactive Nodes</span>
+                    <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-ping" />
+                    <span className="text-[#A81C1C] font-bold">Interactive Nodes</span>
                   </div>
                 </div>
               </div>

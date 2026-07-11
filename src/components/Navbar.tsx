@@ -36,13 +36,13 @@ export default function Navbar({ lang, setLang, activeSection }: NavbarProps) {
           {/* Logo with professional corporate style */}
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <div className="w-10 h-10 bg-[#0F172A] flex items-center justify-center rounded-lg shadow-sm">
-              <div className="w-4 h-4 border-2 border-[#D4AF37] rotate-45"></div>
+              <div className="w-4 h-4 border-2 border-[#A81C1C] rotate-45"></div>
             </div>
             <div className="flex flex-col text-left">
               <span className="text-lg font-sans font-extrabold tracking-tight text-[#0F172A] leading-none">
                 {t.brandName}
               </span>
-              <span className="text-[9px] font-sans font-bold tracking-[0.18em] text-[#D4AF37] mt-1 uppercase">
+              <span className="text-[9px] font-sans font-bold tracking-[0.18em] text-[#A81C1C] mt-1 uppercase">
                 {lang === 'vi' ? 'INVESTMENT & CONSTRUCTION' : 'INVESTMENT & CONSTRUCTION'}
               </span>
             </div>
@@ -57,7 +57,7 @@ export default function Navbar({ lang, setLang, activeSection }: NavbarProps) {
                   onClick={() => handleScroll(item.id)}
                   className={`text-sm font-semibold tracking-wide transition-all duration-200 cursor-pointer ${
                     activeSection === item.id
-                      ? 'text-[#0F172A] border-b-2 border-[#D4AF37] pb-1'
+                      ? 'text-[#0F172A] border-b-2 border-[#A81C1C] pb-1'
                       : 'text-slate-600 hover:text-[#0F172A] hover:border-b-2 hover:border-slate-300 pb-1'
                   }`}
                 >
@@ -74,7 +74,7 @@ export default function Navbar({ lang, setLang, activeSection }: NavbarProps) {
                 className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 hover:text-slate-900 text-xs font-semibold transition duration-200 cursor-pointer"
                 id="lang-toggle-desktop"
               >
-                <Globe className="h-3.5 w-3.5 text-[#D4AF37]" />
+                <Globe className="h-3.5 w-3.5 text-[#A81C1C]" />
                 <span className="font-mono font-bold">{lang.toUpperCase()}</span>
               </button>
 
@@ -83,7 +83,7 @@ export default function Navbar({ lang, setLang, activeSection }: NavbarProps) {
                 onClick={() => handleScroll('contact')}
                 className="px-6 py-2.5 bg-[#0F172A] text-white text-sm font-semibold rounded-md shadow-md shadow-slate-200 hover:bg-slate-800 transition duration-200 cursor-pointer flex items-center space-x-2"
               >
-                <Phone className="h-4 w-4 text-[#D4AF37]" />
+                <Phone className="h-4 w-4 text-[#A81C1C]" />
                 <span>{t.navContact}</span>
               </button>
             </div>
@@ -96,7 +96,7 @@ export default function Navbar({ lang, setLang, activeSection }: NavbarProps) {
               className="flex items-center space-x-1 px-2.5 py-1.5 rounded-md border border-slate-200 bg-slate-50 text-slate-700 text-xs font-mono font-bold cursor-pointer"
               id="lang-toggle-mobile"
             >
-              <Globe className="h-3.5 w-3.5 text-[#D4AF37]" />
+              <Globe className="h-3.5 w-3.5 text-[#A81C1C]" />
               <span>{lang.toUpperCase()}</span>
             </button>
             
@@ -120,7 +120,7 @@ export default function Navbar({ lang, setLang, activeSection }: NavbarProps) {
               onClick={() => handleScroll(item.id)}
               className={`block w-full text-left px-4 py-3 rounded-lg text-base font-semibold ${
                 activeSection === item.id
-                  ? 'bg-slate-50 text-[#0F172A] border-l-4 border-[#D4AF37]'
+                  ? 'bg-slate-50 text-[#0F172A] border-l-4 border-[#A81C1C]'
                   : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
               }`}
             >
@@ -132,7 +132,7 @@ export default function Navbar({ lang, setLang, activeSection }: NavbarProps) {
               onClick={() => handleScroll('contact')}
               className="flex items-center justify-center space-x-2 w-full bg-[#0F172A] text-white py-3 rounded-lg text-base font-semibold shadow-md"
             >
-              <Phone className="h-4 w-4 text-[#D4AF37]" />
+              <Phone className="h-4 w-4 text-[#A81C1C]" />
               <span>{t.navContact}</span>
             </button>
           </div>

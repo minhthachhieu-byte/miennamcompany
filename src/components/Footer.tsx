@@ -24,8 +24,8 @@ export default function Footer({ lang }: FooterProps) {
           {/* Logo & Intro */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center space-x-3 cursor-pointer" onClick={scrollUp}>
-              <div className="bg-[#D4AF37] p-2 rounded-lg shadow-sm">
-                <Building className="h-5 w-5 text-[#0F172A]" />
+              <div className="bg-[#A81C1C] p-2 rounded-lg shadow-sm">
+                <Building className="h-5 w-5 text-white" />
               </div>
               <span className="text-lg font-serif tracking-widest text-white leading-none font-bold">
                 {t.brandName}
@@ -57,7 +57,7 @@ export default function Footer({ lang }: FooterProps) {
           <div className="md:col-span-7 grid sm:grid-cols-3 gap-6 text-xs font-sans">
             {/* HCMC */}
             <div className="space-y-2">
-              <span className="text-[#D4AF37] font-bold block tracking-wider uppercase font-sans text-[10px]">
+              <span className="text-[#A81C1C] font-bold block tracking-wider uppercase font-sans text-[10px]">
                 {t.officeHCMC}
               </span>
               <div className="flex items-start space-x-2">

@@ -37,7 +37,7 @@ export default function Hero({ lang }: HeroProps) {
         {/* Abstract Architectural Background Pattern overlay from Design HTML */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] via-[#0F172A]/90 to-transparent" />
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundImageSize: '40px 40px' }}></div>
-        <div className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-l from-[#D4AF37]/10 to-transparent blur-3xl pointer-events-none" />
+        <div className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-l from-[#A81C1C]/10 to-transparent blur-3xl pointer-events-none" />
       </div>
 
       {/* Main Content Area */}
@@ -45,9 +45,9 @@ export default function Hero({ lang }: HeroProps) {
         <div className="grid lg:grid-cols-12 gap-12 items-center w-full">
           {/* Left Column: Heading, Subtitle, CTA buttons */}
           <div className="lg:col-span-7 space-y-8 text-left">
-            <div className="inline-flex items-center space-x-2 bg-[#D4AF37]/10 border border-[#D4AF37]/30 px-3.5 py-1.5 rounded-full">
-              <span className="flex h-2 w-2 rounded-full bg-[#D4AF37] animate-ping" />
-              <span className="text-xs font-sans font-bold text-[#D4AF37] uppercase tracking-[0.25em]">
+            <div className="inline-flex items-center space-x-2 bg-[#A81C1C]/10 border border-[#A81C1C]/30 px-3.5 py-1.5 rounded-full">
+              <span className="flex h-2 w-2 rounded-full bg-[#A81C1C] animate-ping" />
+              <span className="text-xs font-sans font-bold text-[#A81C1C] uppercase tracking-[0.25em]">
                 {lang === 'vi' ? 'KHÁT VỌNG QUỐC TẾ' : 'INTERNATIONAL VISION'}
               </span>
             </div>
@@ -55,7 +55,7 @@ export default function Hero({ lang }: HeroProps) {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-white leading-[1.15]" style={{ fontFamily: 'Georgia, serif' }}>
               {t.heroTitle.split('&').map((part, index) => (
                 <span key={index} className="block">
-                  {index > 0 && <span className="text-[#D4AF37] italic font-light">&amp; </span>}
+                  {index > 0 && <span className="text-[#A81C1C] italic font-light">&amp; </span>}
                   {part}
                 </span>
               ))}
@@ -68,7 +68,7 @@ export default function Hero({ lang }: HeroProps) {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <button
                 onClick={() => handleScroll('projects')}
-                className="flex items-center justify-center space-x-2 bg-[#D4AF37] hover:bg-[#bfa032] text-[#0F172A] px-8 py-4 rounded-md text-base font-bold shadow-lg shadow-[#D4AF37]/10 hover:shadow-[#D4AF37]/25 transition-all duration-300 cursor-pointer"
+                className="flex items-center justify-center space-x-2 bg-[#A81C1C] hover:bg-[#8B1414] text-white px-8 py-4 rounded-md text-base font-bold shadow-lg shadow-[#A81C1C]/10 hover:shadow-[#A81C1C]/25 transition-all duration-300 cursor-pointer"
               >
                 <span>{t.heroExplore}</span>
                 <ArrowRight className="h-4.5 w-4.5" />
@@ -87,7 +87,7 @@ export default function Hero({ lang }: HeroProps) {
           {/* Right Column: Decorative Premium Floating Element */}
           <div className="lg:col-span-5 hidden lg:block">
             <div className="relative p-8 rounded-2xl bg-[#0F172A]/90 border border-slate-800/80 backdrop-blur-lg shadow-2xl">
-              <div className="absolute -top-4 -right-4 bg-[#D4AF37] text-[#0F172A] font-mono text-[10px] font-extrabold px-3 py-1.5 rounded-full uppercase tracking-widest shadow-md">
+              <div className="absolute -top-4 -right-4 bg-[#A81C1C] text-white font-mono text-[10px] font-extrabold px-3 py-1.5 rounded-full uppercase tracking-widest shadow-md">
                 {lang === 'vi' ? 'HẠNG A QUỐC TẾ' : 'INTERNATIONAL GRADE A'}
               </div>
 
@@ -109,10 +109,10 @@ export default function Hero({ lang }: HeroProps) {
                   <div key={idx} className="space-y-1.5">
                     <div className="flex justify-between text-[11px] font-mono">
                       <span className="text-slate-300">{item.text}</span>
-                      <span className="text-[#D4AF37] font-bold">{item.progress}</span>
+                      <span className="text-[#A81C1C] font-bold">{item.progress}</span>
                     </div>
                     <div className="h-1 bg-slate-800 rounded-full overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-[#D4AF37] to-amber-300 rounded-full" style={{ width: item.progress }} />
+                      <div className="h-full bg-gradient-to-r from-[#A81C1C] to-red-400 rounded-full" style={{ width: item.progress }} />
                     </div>
                   </div>
                 ))}
@@ -131,7 +131,7 @@ export default function Hero({ lang }: HeroProps) {
               return (
                 <div key={idx} className="flex flex-col items-center justify-center text-center p-4 first:pt-0 md:first:pt-4">
                   <div className="inline-flex items-center justify-center p-2.5 rounded-xl bg-white/5 border border-white/10 mb-3.5">
-                    <Icon className="h-5 w-5 text-[#D4AF37]" />
+                    <Icon className="h-5 w-5 text-[#A81C1C]" />
                   </div>
                   <span className="text-3xl sm:text-4xl font-sans font-extrabold text-white tracking-tight">
                     {stat.value}

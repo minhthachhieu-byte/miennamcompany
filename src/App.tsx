@@ -39,7 +39,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans antialiased selection:bg-[#D4AF37]/30 selection:text-[#0F172A]">
+    <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans antialiased selection:bg-[#A81C1C]/30 selection:text-[#0F172A]">
       {/* Sticky Navbar */}
       <Navbar lang={lang} setLang={setLang} activeSection={activeSection} />
 

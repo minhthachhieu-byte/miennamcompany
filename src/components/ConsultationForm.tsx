@@ -134,7 +134,7 @@ export default function ConsultationForm({ lang, selectedProjectId }: Consultati
           {/* Left Column: Form and Validation Warnings */}
           <div className="lg:col-span-7 bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm text-left space-y-6">
             <div>
-              <span className="text-xs font-sans font-bold text-[#D4AF37] tracking-wider uppercase flex items-center space-x-2">
+              <span className="text-xs font-sans font-bold text-[#A81C1C] tracking-wider uppercase flex items-center space-x-2">
                 <Calendar className="h-4 w-4" />
                 <span>{lang === 'vi' ? 'ĐĂNG KÝ HẸN GẶP CHUYÊN GIA' : 'CONSULTATION BOOKING'}</span>
               </span>
@@ -172,7 +172,7 @@ export default function ConsultationForm({ lang, selectedProjectId }: Consultati
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       required
-                      className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 rounded-lg text-xs sm:text-sm text-[#0F172A] placeholder-slate-400 transition"
+                      className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 focus:border-[#A81C1C] focus:ring-1 focus:ring-[#A81C1C]/30 rounded-lg text-xs sm:text-sm text-[#0F172A] placeholder-slate-400 transition"
                       placeholder={lang === 'vi' ? 'Ví dụ: Nguyễn Văn A' : 'e.g. John Doe'}
                     />
                   </div>
@@ -188,7 +188,7 @@ export default function ConsultationForm({ lang, selectedProjectId }: Consultati
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       required
-                      className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 rounded-lg text-xs sm:text-sm text-[#0F172A] placeholder-slate-400 transition"
+                      className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 focus:border-[#A81C1C] focus:ring-1 focus:ring-[#A81C1C]/30 rounded-lg text-xs sm:text-sm text-[#0F172A] placeholder-slate-400 transition"
                       placeholder={lang === 'vi' ? 'Ví dụ: 09012345xx' : 'e.g. +84 901234xxx'}
                     />
                   </div>
@@ -201,12 +201,12 @@ export default function ConsultationForm({ lang, selectedProjectId }: Consultati
                 <div className="relative">
                   <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
                   <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 rounded-lg text-xs sm:text-sm text-[#0F172A] placeholder-slate-400 transition"
-                    placeholder="example@gmail.com"
+                     type="email"
+                     value={email}
+                     onChange={(e) => setEmail(e.target.value)}
+                     required
+                     className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 focus:border-[#A81C1C] focus:ring-1 focus:ring-[#A81C1C]/30 rounded-lg text-xs sm:text-sm text-[#0F172A] placeholder-slate-400 transition"
+                     placeholder="example@gmail.com"
                   />
                 </div>
               </div>
@@ -219,7 +219,7 @@ export default function ConsultationForm({ lang, selectedProjectId }: Consultati
                     id="form-project"
                     value={project}
                     onChange={(e) => setProject(e.target.value)}
-                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 rounded-lg text-xs sm:text-sm text-[#0F172A] transition"
+                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-[#A81C1C] focus:ring-1 focus:ring-[#A81C1C]/30 rounded-lg text-xs sm:text-sm text-[#0F172A] transition"
                   >
                     {projects.map((p) => (
                       <option key={p.id} value={p.id}>
@@ -235,7 +235,7 @@ export default function ConsultationForm({ lang, selectedProjectId }: Consultati
                   <select
                     value={budget}
                     onChange={(e) => setBudget(e.target.value)}
-                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 rounded-lg text-xs sm:text-sm text-[#0F172A] transition"
+                    className="w-full px-4 py-3 bg-slate-50 border border-slate-200 focus:border-[#A81C1C] focus:ring-1 focus:ring-[#A81C1C]/30 rounded-lg text-xs sm:text-sm text-[#0F172A] transition"
                   >
                     <option value="under5">{t.formBudget1}</option>
                     <option value="5-15">{t.formBudget2}</option>
@@ -255,7 +255,7 @@ export default function ConsultationForm({ lang, selectedProjectId }: Consultati
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     rows={4}
-                    className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]/30 rounded-lg text-xs sm:text-sm text-[#0F172A] placeholder-slate-400 transition"
+                    className="w-full pl-10 pr-4 py-3 bg-slate-50 border border-slate-200 focus:border-[#A81C1C] focus:ring-1 focus:ring-[#A81C1C]/30 rounded-lg text-xs sm:text-sm text-[#0F172A] placeholder-slate-400 transition"
                     placeholder={lang === 'vi' ? 'Quý khách vui lòng cung cấp khung giờ rảnh và yêu cầu riêng biệt.' : 'Leave details about your ideal meeting slot or property layout specs.'}
                   />
                 </div>
@@ -285,13 +285,13 @@ export default function ConsultationForm({ lang, selectedProjectId }: Consultati
           {/* Right Column: Information, Corporate Addresses & Submitted lead history panel */}
           <div className="lg:col-span-5 space-y-6 text-left">
             <div className="p-6 rounded-2xl bg-[#0F172A] text-white space-y-4 shadow-sm">
-              <span className="text-[10px] font-mono font-bold text-[#D4AF37] uppercase tracking-widest block border-b border-slate-800 pb-3">
+              <span className="text-[10px] font-mono font-bold text-[#A81C1C] uppercase tracking-widest block border-b border-slate-800 pb-3">
                 {lang === 'vi' ? 'QUAN HỆ KHÁCH HÀNG' : 'INVESTOR RELATIONS'}
               </span>
 
               <div className="space-y-4 text-xs sm:text-sm">
                 <div className="flex items-start space-x-3">
-                  <User className="h-5 w-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                  <User className="h-5 w-5 text-[#A81C1C] flex-shrink-0 mt-0.5" />
                   <div>
                     <h5 className="font-bold text-white">{lang === 'vi' ? 'Dịch Vụ Khách Hàng Đặc Quyền' : 'Bespoke Client Concierge'}</h5>
                     <p className="text-xs text-slate-400 leading-relaxed font-sans mt-0.5">
@@ -303,15 +303,15 @@ export default function ConsultationForm({ lang, selectedProjectId }: Consultati
                 </div>
 
                 <div className="flex items-start space-x-3">
-                  <Phone className="h-5 w-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                  <Phone className="h-5 w-5 text-[#A81C1C] flex-shrink-0 mt-0.5" />
                   <div>
                     <h5 className="font-bold text-white">{lang === 'vi' ? 'Hotline Tổng Đài Quốc Tế' : 'Direct International Hotline'}</h5>
-                    <p className="text-xs text-[#D4AF37] font-mono font-bold mt-0.5">1800 68xx / (+84) 28 3930 xxxx</p>
+                    <p className="text-xs text-[#A81C1C] font-mono font-bold mt-0.5">1800 68xx / (+84) 28 3930 xxxx</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-3">
-                  <Mail className="h-5 w-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                  <Mail className="h-5 w-5 text-[#A81C1C] flex-shrink-0 mt-0.5" />
                   <div>
                     <h5 className="font-bold text-white">{lang === 'vi' ? 'Hộp Thư Điện Tử' : 'Corporate Enquiries'}</h5>
                     <p className="text-xs text-slate-300 font-mono mt-0.5">invest@miennamland.com.vn</p>
@@ -323,7 +323,7 @@ export default function ConsultationForm({ lang, selectedProjectId }: Consultati
             {/* Submitted consultation History Panel */}
             {history.length > 0 && (
               <div className="p-6 rounded-2xl bg-white border border-slate-200 space-y-4 shadow-xs">
-                <span className="text-[10px] font-sans font-bold text-[#D4AF37] uppercase tracking-widest block border-b border-slate-100 pb-3">
+                <span className="text-[10px] font-sans font-bold text-[#A81C1C] uppercase tracking-widest block border-b border-slate-100 pb-3">
                   {t.formHistory}
                 </span>
 
@@ -344,7 +344,7 @@ export default function ConsultationForm({ lang, selectedProjectId }: Consultati
 
                       <div className="pr-6 font-sans">
                         <span className="block font-bold text-[#0F172A]">{item.name}</span>
-                        <span className="block text-slate-500 mt-0.5">{lang === 'vi' ? 'Dự án:' : 'Project:'} <strong className="text-[#D4AF37]">{item.project}</strong></span>
+                        <span className="block text-slate-500 mt-0.5">{lang === 'vi' ? 'Dự án:' : 'Project:'} <strong className="text-[#A81C1C]">{item.project}</strong></span>
                         <span className="block text-slate-500">{lang === 'vi' ? 'Ngân sách:' : 'Budget:'} <strong className="text-slate-700">{item.budget}</strong></span>
                         {item.message && (
                           <p className="text-slate-500 mt-1 border-t border-slate-200 pt-1 leading-relaxed italic">

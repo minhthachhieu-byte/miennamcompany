@@ -86,13 +86,13 @@ export default function InvestCalculator({ lang, selectedProjectId }: InvestCalc
 
   return (
     <section id="calculator" className="py-24 bg-[#F8FAFC] relative overflow-hidden border-t border-b border-slate-200">
-      <div className="absolute top-1/3 right-5 w-80 h-80 bg-[#D4AF37]/5 rounded-full filter blur-3xl pointer-events-none" />
+      <div className="absolute top-1/3 right-5 w-80 h-80 bg-[#A81C1C]/5 rounded-full filter blur-3xl pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center space-x-2 bg-white border border-slate-200 px-3.5 py-1.5 rounded-full shadow-xs">
-            <Calculator className="h-4 w-4 text-[#D4AF37]" />
+            <Calculator className="h-4 w-4 text-[#A81C1C]" />
             <span className="text-xs font-sans font-bold text-[#0F172A] uppercase tracking-[0.2em]">
               {lang === 'vi' ? 'HOẠCH ĐỊNH BẤT ĐỘNG SẢN' : 'REAL ESTATE ECONOMICS'}
             </span>
@@ -101,7 +101,7 @@ export default function InvestCalculator({ lang, selectedProjectId }: InvestCalc
           <h2 className="text-3xl sm:text-4xl font-serif text-[#0F172A] tracking-tight leading-tight" style={{ fontFamily: 'Georgia, serif' }}>
             {t.calcTitle}
           </h2>
-          <div className="h-1 w-20 bg-[#D4AF37] mx-auto rounded-full" />
+          <div className="h-1 w-20 bg-[#A81C1C] mx-auto rounded-full" />
           <p className="text-sm sm:text-base text-slate-500">
             {t.calcSubtitle}
           </p>
@@ -146,7 +146,7 @@ export default function InvestCalculator({ lang, selectedProjectId }: InvestCalc
                 <div className="space-y-2">
                   <div className="flex justify-between items-center text-xs font-mono">
                     <label className="text-slate-600 font-sans font-semibold">{t.labelProjectPrice}</label>
-                    <span className="text-[#D4AF37] font-bold font-mono text-sm">{formatVND(propertyValue)}</span>
+                    <span className="text-[#A81C1C] font-bold font-mono text-sm">{formatVND(propertyValue)}</span>
                   </div>
                   <input
                     type="range"
@@ -155,7 +155,7 @@ export default function InvestCalculator({ lang, selectedProjectId }: InvestCalc
                     step={500000000}
                     value={propertyValue}
                     onChange={(e) => setPropertyValue(Number(e.target.value))}
-                    className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
+                    className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#A81C1C]"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-slate-400">
                     <span>2 tỷ</span>
@@ -178,7 +178,7 @@ export default function InvestCalculator({ lang, selectedProjectId }: InvestCalc
                     step={5}
                     value={downpaymentPercent}
                     onChange={(e) => setDownpaymentPercent(Number(e.target.value))}
-                    className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
+                    className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#A81C1C]"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-slate-400">
                     <span>15% ({lang === 'vi' ? 'Tối thiểu' : 'Minimum'})</span>
@@ -190,7 +190,7 @@ export default function InvestCalculator({ lang, selectedProjectId }: InvestCalc
                 <div className="space-y-2">
                   <div className="flex justify-between items-center text-xs font-mono">
                     <label className="text-slate-600 font-sans font-semibold">{t.labelInterest}</label>
-                    <span className="text-[#D4AF37] font-bold font-mono text-sm">{interestRate}% / {lang === 'vi' ? 'năm' : 'year'}</span>
+                    <span className="text-[#A81C1C] font-bold font-mono text-sm">{interestRate}% / {lang === 'vi' ? 'năm' : 'year'}</span>
                   </div>
                   <input
                     type="range"
@@ -199,7 +199,7 @@ export default function InvestCalculator({ lang, selectedProjectId }: InvestCalc
                     step={0.1}
                     value={interestRate}
                     onChange={(e) => setInterestRate(Number(e.target.value))}
-                    className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
+                    className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#A81C1C]"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-slate-400">
                     <span>4.5%</span>
@@ -220,7 +220,7 @@ export default function InvestCalculator({ lang, selectedProjectId }: InvestCalc
                     step={1}
                     value={loanTermYears}
                     onChange={(e) => setLoanTermYears(Number(e.target.value))}
-                    className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
+                    className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#A81C1C]"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-slate-400">
                     <span>5 {lang === 'vi' ? 'Năm' : 'Years'}</span>
@@ -258,7 +258,7 @@ export default function InvestCalculator({ lang, selectedProjectId }: InvestCalc
                       <span className="text-slate-400">{t.calcInterestFirstMonth}:</span>
                       <span className="font-mono text-slate-200">{formatVND(firstMonthInterest)}</span>
                     </div>
-                    <div className="flex justify-between border-t border-slate-800 pt-3 text-[#D4AF37] font-bold text-sm">
+                    <div className="flex justify-between border-t border-slate-800 pt-3 text-[#A81C1C] font-bold text-sm">
                       <span>{t.calcTotalInterest}:</span>
                       <span className="font-mono">{formatVND(totalInterestPayable)}</span>
                     </div>
@@ -267,7 +267,7 @@ export default function InvestCalculator({ lang, selectedProjectId }: InvestCalc
 
                 {/* Info block */}
                 <div className="p-3.5 rounded-lg bg-slate-900 border border-slate-800 flex items-start space-x-2.5">
-                  <Info className="h-4.5 w-4.5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                  <Info className="h-4.5 w-4.5 text-[#A81C1C] flex-shrink-0 mt-0.5" />
                   <span className="text-[11px] text-slate-400 leading-relaxed font-sans">
                     {lang === 'vi'
                       ? 'Lưu ý: Bảng tính sử dụng hình thức dư nợ giảm dần, số tiền lãi thực tế sẽ giảm đều qua các kỳ hạn trả góp tiếp theo.'
@@ -285,7 +285,7 @@ export default function InvestCalculator({ lang, selectedProjectId }: InvestCalc
                 <div className="space-y-2">
                   <div className="flex justify-between items-center text-xs font-mono">
                     <label className="text-slate-600 font-sans font-semibold">{t.labelRentalYield}</label>
-                    <span className="text-[#D4AF37] font-bold font-mono text-sm">{formatVND(monthlyRent)} / {lang === 'vi' ? 'tháng' : 'month'}</span>
+                    <span className="text-[#A81C1C] font-bold font-mono text-sm">{formatVND(monthlyRent)} / {lang === 'vi' ? 'tháng' : 'month'}</span>
                   </div>
                   <input
                     type="range"
@@ -294,7 +294,7 @@ export default function InvestCalculator({ lang, selectedProjectId }: InvestCalc
                     step={1000000}
                     value={monthlyRent}
                     onChange={(e) => setMonthlyRent(Number(e.target.value))}
-                    className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
+                    className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#A81C1C]"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-slate-400">
                     <span>8 triệu</span>
@@ -315,7 +315,7 @@ export default function InvestCalculator({ lang, selectedProjectId }: InvestCalc
                     step={0.5}
                     value={appreciationPercent}
                     onChange={(e) => setAppreciationPercent(Number(e.target.value))}
-                    className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
+                    className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#A81C1C]"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-slate-400">
                     <span>3%</span>
@@ -336,7 +336,7 @@ export default function InvestCalculator({ lang, selectedProjectId }: InvestCalc
                     step={5}
                     value={occupancyRate}
                     onChange={(e) => setOccupancyRate(Number(e.target.value))}
-                    className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#D4AF37]"
+                    className="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#A81C1C]"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-slate-400">
                     <span>50%</span>
@@ -348,7 +348,7 @@ export default function InvestCalculator({ lang, selectedProjectId }: InvestCalc
               {/* Right Column: yield Outputs */}
               <div className="lg:col-span-5 bg-[#0F172A] text-white rounded-xl p-6 flex flex-col justify-between h-full space-y-6 text-left shadow-xs">
                 <div className="space-y-4">
-                  <span className="text-[10px] font-mono font-bold text-[#D4AF37] tracking-wider uppercase block">
+                  <span className="text-[10px] font-mono font-bold text-[#A81C1C] tracking-wider uppercase block">
                     {lang === 'vi' ? 'ƯỚC TÍNH TỶ SUẤT ROI CHUNG' : 'ESTIMATED ROI RETURN'}
                   </span>
 
@@ -364,7 +364,7 @@ export default function InvestCalculator({ lang, selectedProjectId }: InvestCalc
                   <div className="space-y-3.5 text-xs font-sans">
                     <div className="flex justify-between">
                       <span className="text-slate-400">{t.calcYieldResult}:</span>
-                      <span className="font-mono text-[#D4AF37] font-bold">{rentalYieldRatio.toFixed(1)}% / {lang === 'vi' ? 'năm' : 'year'}</span>
+                      <span className="font-mono text-[#A81C1C] font-bold">{rentalYieldRatio.toFixed(1)}% / {lang === 'vi' ? 'năm' : 'year'}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-slate-400">{lang === 'vi' ? 'Thu nhập thuê dòng/năm:' : 'Net rental income/year:'}</span>
@@ -383,7 +383,7 @@ export default function InvestCalculator({ lang, selectedProjectId }: InvestCalc
 
                 {/* Info block */}
                 <div className="p-3.5 rounded-lg bg-slate-900 border border-slate-800 flex items-start space-x-2.5">
-                  <Info className="h-4.5 w-4.5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                  <Info className="h-4.5 w-4.5 text-[#A81C1C] flex-shrink-0 mt-0.5" />
                   <span className="text-[11px] text-slate-400 leading-relaxed font-sans">
                     {lang === 'vi'
                       ? 'Lưu ý: Bảng tính giả định tài sản tăng giá trị đều theo mô hình lãi kép hàng năm và duy trì tỉ lệ lấp đầy cố định.'

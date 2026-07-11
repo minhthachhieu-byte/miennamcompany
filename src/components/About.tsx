@@ -34,14 +34,14 @@ export default function About({ lang }: AboutProps) {
   return (
     <section id="about" className="py-24 bg-[#F8FAFC] relative overflow-hidden border-t border-slate-200">
       {/* Decorative backdrop elements */}
-      <div className="absolute top-1/4 left-1/10 w-96 h-96 bg-[#D4AF37]/5 rounded-full filter blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-1/10 w-96 h-96 bg-[#A81C1C]/5 rounded-full filter blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/10 w-96 h-96 bg-slate-200/50 rounded-full filter blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center space-x-2 bg-white border border-slate-200 px-3.5 py-1.5 rounded-full shadow-xs">
-            <Eye className="h-4 w-4 text-[#D4AF37]" />
+            <Eye className="h-4 w-4 text-[#A81C1C]" />
             <span className="text-xs font-sans font-bold text-[#0F172A] uppercase tracking-[0.2em]">
               {lang === 'vi' ? 'Về Chúng Tôi' : 'Who We Are'}
             </span>
@@ -50,8 +50,8 @@ export default function About({ lang }: AboutProps) {
           <h2 className="text-3xl sm:text-4xl font-serif text-[#0F172A] tracking-tight leading-tight" style={{ fontFamily: 'Georgia, serif' }}>
             {t.aboutTitle}
           </h2>
-          <div className="h-1 w-20 bg-[#D4AF37] mx-auto rounded-full" />
-          <p className="text-lg text-[#D4AF37] font-semibold tracking-wide mt-2">
+          <div className="h-1 w-20 bg-[#A81C1C] mx-auto rounded-full" />
+          <p className="text-lg text-[#A81C1C] font-semibold tracking-wide mt-2">
             {t.aboutSubtitle}
           </p>
         </div>
@@ -67,8 +67,8 @@ export default function About({ lang }: AboutProps) {
             </p>
 
             <div className="p-6 rounded-xl bg-white border border-slate-200 flex items-start space-x-4 shadow-xs">
-              <div className="bg-[#D4AF37]/10 p-3 rounded-lg border border-[#D4AF37]/20 flex-shrink-0 mt-1">
-                <Sparkles className="h-6 w-6 text-[#D4AF37]" />
+              <div className="bg-[#A81C1C]/10 p-3 rounded-lg border border-[#A81C1C]/20 flex-shrink-0 mt-1">
+                <Sparkles className="h-6 w-6 text-[#A81C1C]" />
               </div>
               <div>
                 <h4 className="text-sm font-bold text-[#0F172A] uppercase tracking-wider mb-1 font-sans">
@@ -97,7 +97,7 @@ export default function About({ lang }: AboutProps) {
               {/* Overlay Badge */}
               <div className="absolute bottom-6 left-6 right-6 p-6 rounded-xl bg-[#0F172A]/95 backdrop-blur-md border border-slate-800 shadow-lg text-left">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-xs font-sans font-bold text-[#D4AF37] uppercase tracking-widest">
+                  <span className="text-xs font-sans font-bold text-[#A81C1C] uppercase tracking-widest">
                     {lang === 'vi' ? 'QUẢN TRỊ RỦI RO ĐẠT CHUẨN' : 'STANDARD RISK GOVERNANCE'}
                   </span>
                   <span className="text-xs font-mono font-bold text-slate-400">ISO 9001:2015</span>
@@ -119,10 +119,10 @@ export default function About({ lang }: AboutProps) {
             return (
               <div
                 key={idx}
-                className="group relative p-8 rounded-xl bg-white border border-slate-200 hover:border-[#D4AF37]/50 shadow-sm hover:shadow-md transition-all duration-300 text-left"
+                className="group relative p-8 rounded-xl bg-white border border-slate-200 hover:border-[#A81C1C]/50 shadow-sm hover:shadow-md transition-all duration-300 text-left"
               >
                 <div className={`inline-flex items-center justify-center p-3.5 rounded-lg bg-[#0F172A] text-white shadow-md mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon className="h-6 w-6 text-[#D4AF37]" />
+                  <Icon className="h-6 w-6 text-[#A81C1C]" />
                 </div>
 
                 <h3 className="text-xl font-serif font-bold text-[#0F172A] mb-3 tracking-wide" style={{ fontFamily: 'Georgia, serif' }}>
@@ -134,7 +134,7 @@ export default function About({ lang }: AboutProps) {
                 </p>
 
                 {/* Accent Corner Line */}
-                <div className="absolute bottom-0 left-0 w-0 h-1 bg-[#D4AF37] group-hover:w-full transition-all duration-300 rounded-b-full" />
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-[#A81C1C] group-hover:w-full transition-all duration-300 rounded-b-full" />
               </div>
             );
           })}

@@ -140,7 +140,7 @@ export default function VirtualTour({ lang }: VirtualTourProps) {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
           <div className="inline-flex items-center space-x-2 bg-slate-50 border border-slate-200 px-3.5 py-1.5 rounded-full shadow-xs">
-            <Eye className="h-4 w-4 text-[#D4AF37]" />
+            <Eye className="h-4 w-4 text-[#A81C1C]" />
             <span className="text-xs font-sans font-bold text-[#0F172A] uppercase tracking-[0.2em]">
               {lang === 'vi' ? 'KHÔNG GIAN VỊ LAI 3D' : '3D IMMERSIVE CONCEPTS'}
             </span>
@@ -149,7 +149,7 @@ export default function VirtualTour({ lang }: VirtualTourProps) {
           <h2 className="text-3xl sm:text-4xl font-serif text-[#0F172A] tracking-tight leading-tight" style={{ fontFamily: 'Georgia, serif' }}>
             {t.tourTitle}
           </h2>
-          <div className="h-1 w-20 bg-[#D4AF37] mx-auto rounded-full" />
+          <div className="h-1 w-20 bg-[#A81C1C] mx-auto rounded-full" />
           <p className="text-sm sm:text-base text-slate-500">
             {t.tourSubtitle}
           </p>
@@ -201,8 +201,8 @@ export default function VirtualTour({ lang }: VirtualTourProps) {
                       onClick={() => setActiveHotspot(activeHotspot === idx ? null : idx)}
                       className={`relative flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300 shadow-lg cursor-pointer ${
                         activeHotspot === idx
-                          ? 'bg-[#D4AF37] text-[#0F172A] scale-110 ring-4 ring-[#D4AF37]/35'
-                          : 'bg-[#0F172A]/90 border border-[#D4AF37] text-[#D4AF37] hover:scale-105 animate-pulse'
+                          ? 'bg-[#A81C1C] text-white scale-110 ring-4 ring-[#A81C1C]/35'
+                          : 'bg-[#0F172A]/90 border border-[#A81C1C] text-[#A81C1C] hover:scale-105 animate-pulse'
                       }`}
                       title={lang === 'vi' ? hs.titleVi : hs.titleEn}
                     >
@@ -212,7 +212,7 @@ export default function VirtualTour({ lang }: VirtualTourProps) {
                     {/* Desktop Hover Tooltip / Floating Card */}
                     {activeHotspot === idx && (
                       <div className="absolute left-10 top-0 z-20 w-64 bg-[#0F172A] border border-slate-700 p-4 rounded-xl shadow-2xl text-left animate-fade-in text-xs text-white">
-                        <h5 className="font-bold text-[#D4AF37] mb-1">
+                        <h5 className="font-bold text-[#A81C1C] mb-1">
                           {lang === 'vi' ? hs.titleVi : hs.titleEn}
                         </h5>
                         <p className="text-slate-300 font-sans leading-relaxed">
@@ -226,7 +226,7 @@ export default function VirtualTour({ lang }: VirtualTourProps) {
 
               {/* Guide note */}
               <div className="flex items-center space-x-2 text-xs text-slate-500 justify-center">
-                <Info className="h-4 w-4 text-[#D4AF37]/80" />
+                <Info className="h-4 w-4 text-[#A81C1C]/80" />
                 <span>{t.tourInteractGuide}</span>
               </div>
             </div>
@@ -275,8 +275,8 @@ export default function VirtualTour({ lang }: VirtualTourProps) {
 
               {/* Selected hotspot card sidebar (mobile fallback & convenient reading) */}
               {activeHotspot !== null && (
-                <div className="p-4 bg-[#D4AF37]/5 border border-[#D4AF37]/15 rounded-xl animate-fade-in">
-                  <span className="text-[10px] font-sans font-bold text-[#D4AF37] block uppercase tracking-wider mb-1">
+                <div className="p-4 bg-[#A81C1C]/5 border border-[#A81C1C]/15 rounded-xl animate-fade-in">
+                  <span className="text-[10px] font-sans font-bold text-[#A81C1C] block uppercase tracking-wider mb-1">
                     {lang === 'vi' ? 'ĐIỂM NÓNG HOẠT ĐỘNG' : 'SELECTED HIGHLIGHT'}
                   </span>
                   <h4 className="text-sm font-bold text-[#0F172A]">
