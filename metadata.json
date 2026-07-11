@@ -1,0 +1,6 @@
+{
+  "name": "BĐS Miền Nam",
+  "description": "Website giới thiệu năng lực đầu tư, xây dựng và danh mục dự án tầm cỡ quốc tế của Công ty Cổ phần BĐS Miền Nam.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
